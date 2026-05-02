@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>ASAFRUT - Pulpas Naturales</title>
+
+<meta name="description" content="Pulpas naturales de maracuyá en Colombia. Frescura, calidad y directo del productor.">
+<meta name="keywords" content="pulpas, maracuyá, frutas, Colombia, natural">
+
+<style>
+:root{
+--green:#2E7D32;
+--light:#F9F9F9;
+--dark:#1B1B1B;
+--accent:#4CAF50;
+}
+
+body{
+margin:0;
+font-family:Arial, sans-serif;
+color:var(--dark);
+}
+
+/* HEADER */
+header{
+position:fixed;
+width:100%;
+background:white;
+padding:15px;
+box-shadow:0 2px 10px rgba(0,0,0,0.1);
+z-index:1000;
+}
+
+nav{
+display:flex;
+justify-content:space-between;
+align-items:center;
+max-width:1100px;
+margin:auto;
+}
+
+.logo{
+font-weight:bold;
+font-size:24px;
+color:var(--green);
+}
+
+nav a{
+margin:0 10px;
+text-decoration:none;
+color:var(--dark);
+}
+
+/* HERO */
+.hero{
+height:100vh;
+background:url('https://images.unsplash.com/photo-1580052614034-d1f39a5f2bd8') center/cover;
+display:flex;
+flex-direction:column;
+justify-content:center;
+align-items:center;
+color:white;
+text-align:center;
+}
+
+.hero h1{
+font-size:40px;
+}
+
+.btn{
+background:#25D366;
+color:white;
+padding:15px 25px;
+border-radius:30px;
+text-decoration:none;
+margin-top:20px;
+display:inline-block;
+}
+
+/* SECCIONES */
+section{
+padding:80px 20px;
+max-width:1100px;
+margin:auto;
+}
+
+h2{
+text-align:center;
+margin-bottom:30px;
+}
+
+/* PRODUCTOS */
+.grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:20px;
+}
+
+.card{
+background:white;
+border-radius:15px;
+box-shadow:0 10px 20px rgba(0,0,0,0.1);
+overflow:hidden;
+}
+
+.card img{
+width:100%;
+height:200px;
+object-fit:cover;
+}
+
+.card h3{
+padding:10px;
+}
+
+.card p{
+padding:0 10px 20px;
+}
+
+/* CONTACTO */
+.contact{
+text-align:center;
+background:var(--light);
+padding:60px 20px;
+border-radius:20px;
+}
+
+/* WHATSAPP FLOAT */
+.float{
+position:fixed;
+bottom:20px;
+right:20px;
+background:#25D366;
+color:white;
+width:60px;
+height:60px;
+border-radius:50%;
+display:flex;
+align-items:center;
+justify-content:center;
+text-decoration:none;
+font-size:24px;
+}
+
+/* FOOTER */
+footer{
+background:var(--dark);
+color:white;
+text-align:center;
+padding:20px;
+}
+</style>
+</head>
+
+<body>
+
+<header>
+<nav>
+<div class="logo">ASAFRUT</div>
+<div>
+<a href="#inicio">Inicio</a>
+<a href="#productos">Productos</a>
+<a href="#contacto">Contacto</a>
+</div>
+</nav>
+</header>
+
+<section class="hero" id="inicio">
+<h1>Pulpas naturales 100% frescas 🍍</h1>
+<p>Directo del campo colombiano a tu mesa</p>
+<a class="btn" href="https://wa.me/5731122334455?text=Hola,%20quiero%20información%20sobre%20las%20pulpas%20ASAFRUT%20🍍">📲 Pedir por WhatsApp</a>
+</section>
+
+<section id="productos">
+<h2>Nuestros Productos</h2>
+<div class="grid">
+
+<div class="card">
+<img src="https://images.unsplash.com/photo-1580052614034-d1f39a5f2bd8">
+<h3>Maracuyá</h3>
+<p>Fruta fresca cultivada directamente por nosotros.</p>
+</div>
+
+<div class="card">
+<img src="https://images.unsplash.com/photo-1541599468178-c9eb94a8c0a8">
+<h3>Pulpa de Mango</h3>
+<p>Dulce, natural y perfecta para bebidas.</p>
+</div>
+
+<div class="card">
+<img src="https://images.unsplash.com/photo-1610973362999-055e63f76e00">
+<h3>Pulpa de Piña</h3>
+<p>Refrescante y 100% natural.</p>
+</div>
+
+</div>
+</section>
+
+<section id="contacto">
+<div class="contact">
+<h2>Haz tu pedido hoy 🍍</h2>
+<p>Recibe pulpas 100% naturales directo del productor</p>
+<a class="btn" href="https://wa.me/5731122334455?text=Hola,%20quiero%20información%20sobre%20las%20pulpas%20ASAFRUT%20🍍">💬 Hablar por WhatsApp</a>
+</div>
+</section>
+
+<footer>
+<p>ASAFRUT © 2026 - Natural, fresco y colombiano</p>
+</footer>
+
+<a class="float" href="https://wa.me/5731122334455?text=Hola,%20quiero%20información%20sobre%20las%20pulpas%20ASAFRUT%20🍍">💬</a>
+
+</body>
+</html>
