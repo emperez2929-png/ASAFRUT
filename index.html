@@ -1,223 +1,361 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="es">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, viewport-fit=cover"
+    />
+    <title>ASAFRUT | Pulpas y Frutas</title>
+    <meta
+      name="description"
+      content="ASAFRUT: pulpas y frutas frescas del campo para tu hogar. Maracuyá en fruta, pulpas de maracuyá, mango y guanabana."
+    />
+    <meta name="theme-color" content="#f5b700" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@600;700;800&family=Nunito:wght@400;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      :root {
+        --bg-1: #fff7e6;
+        --bg-2: #e8f7d4;
+        --card: #ffffff;
+        --ink: #20311f;
+        --soft: #547252;
+        --primary: #1ea85d;
+        --primary-press: #138146;
+        --sun: #f5b700;
+        --line: #d7e6cd;
+        --shadow: 0 10px 24px rgba(35, 65, 31, 0.12);
+        --radius: 20px;
+      }
 
-<title>ASAFRUT - Pulpas Naturales</title>
+      * {
+        box-sizing: border-box;
+      }
 
-<meta name="description" content="Pulpas naturales de maracuyá en Colombia. Frescura, calidad y directo del productor.">
-<meta name="keywords" content="pulpas, maracuyá, frutas, Colombia, natural">
+      html {
+        scroll-behavior: smooth;
+      }
 
-<style>
-:root{
---green:#2E7D32;
---light:#F9F9F9;
---dark:#1B1B1B;
---accent:#4CAF50;
-}
+      body {
+        margin: 0;
+        font-family: "Nunito", sans-serif;
+        color: var(--ink);
+        background:
+          radial-gradient(120% 50% at 10% -10%, #ffe59b 0%, transparent 55%),
+          radial-gradient(110% 60% at 90% -10%, #cff0b8 0%, transparent 55%),
+          linear-gradient(180deg, var(--bg-1), var(--bg-2));
+        padding-bottom: 100px;
+      }
 
-body{
-margin:0;
-font-family:Arial, sans-serif;
-color:var(--dark);
-}
+      .wrap {
+        width: min(100%, 520px);
+        margin: 0 auto;
+        padding: 18px 16px 32px;
+      }
 
-/* HEADER */
-header{
-position:fixed;
-width:100%;
-background:white;
-padding:15px;
-box-shadow:0 2px 10px rgba(0,0,0,0.1);
-z-index:1000;
-}
+      .hero {
+        background: linear-gradient(
+          150deg,
+          rgba(255, 255, 255, 0.95),
+          rgba(255, 255, 255, 0.88)
+        );
+        border: 1px solid rgba(255, 255, 255, 0.7);
+        border-radius: 24px;
+        box-shadow: var(--shadow);
+        padding: 20px 16px;
+        text-align: center;
+        margin-top: 10px;
+        animation: rise 500ms ease-out;
+      }
 
-nav{
-display:flex;
-justify-content:space-between;
-align-items:center;
-max-width:1100px;
-margin:auto;
-}
+      .logo {
+        width: 94px;
+        height: 94px;
+        border-radius: 50%;
+        object-fit: cover;
+        border: 3px solid #ffffff;
+        box-shadow: 0 8px 18px rgba(0, 0, 0, 0.16);
+        background: #fff;
+      }
 
-.logo{<div class="logo">
-  <img src="C:\Users\Usuario\Downloads\LOGO ASOCIASON.jpg" alt="ASAFRUT" style="height:50px;">
-</div>
-font-weight:bold;
-font-size:24px;
-color:var(--green);
-}
+      h1,
+      h2 {
+        margin: 0;
+        font-family: "Baloo 2", sans-serif;
+        line-height: 1.05;
+        letter-spacing: 0.2px;
+      }
 
-nav a{
-margin:0 10px;
-text-decoration:none;
-color:var(--dark);
-}
+      h1 {
+        font-size: 2rem;
+        margin-top: 10px;
+      }
 
-/* HERO */
-.hero{
-height:100vh;
-background:url('https://images.unsplash.com/photo-1580052614034-d1f39a5f2bd8') center/cover;
-display:flex;
-flex-direction:column;
-justify-content:center;
-align-items:center;
-color:white;
-text-align:center;
-}
+      .tagline {
+        margin: 6px 0 0;
+        color: #355834;
+        font-weight: 700;
+        font-size: 1.02rem;
+      }
 
-.hero h1{
-font-size:40px;
-}
+      .about {
+        margin: 14px 0 0;
+        color: var(--soft);
+        font-size: 0.98rem;
+        line-height: 1.45;
+      }
 
-.btn{
-background:#25D366;
-color:white;
-padding:15px 25px;
-border-radius:30px;
-text-decoration:none;
-margin-top:20px;
-display:inline-block;
-}
+      .section {
+        margin-top: 16px;
+        background: var(--card);
+        border: 1px solid var(--line);
+        border-radius: var(--radius);
+        box-shadow: var(--shadow);
+        padding: 18px 14px;
+        animation: rise 700ms ease-out;
+      }
 
-/* SECCIONES */
-section{
-padding:80px 20px;
-max-width:1100px;
-margin:auto;
-}
+      .section h2 {
+        font-size: 1.58rem;
+        color: #2b4e2a;
+      }
 
-h2{
-text-align:center;
-margin-bottom:30px;
-}
+      .section-label {
+        margin: 4px 0 14px;
+        color: #567353;
+        font-size: 0.92rem;
+        font-weight: 700;
+      }
 
-/* PRODUCTOS */
-.grid{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-gap:20px;
-}
+      .product-list {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 10px;
+        max-width: 100%;
+      }
 
-.card{
-background:white;
-border-radius:15px;
-box-shadow:0 10px 20px rgba(0,0,0,0.1);
-overflow:hidden;
-}
+      .product-item {
+        border: 1px solid #dcebd3;
+        border-radius: 14px;
+        overflow: hidden;
+        background: linear-gradient(90deg, #fff, #f8fff2);
+        display: flex;
+        flex-direction: row;
+        align-items: stretch;
+      }
 
-.card img{
-width:100%;
-height:200px;
-object-fit:cover;
-}
+      .product-item img {
+        width: 100px;
+        height: 100px;
+        object-fit: cover;
+        display: block;
+        flex-shrink: 0;
+      }
 
-.card h3{
-padding:10px;
-}
+      .product-item-text {
+        padding: 10px 12px;
+        font-weight: 700;
+        color: #2b4d2a;
+        font-size: 0.88rem;
+        text-align: left;
+        display: flex;
+        align-items: center;
+        flex: 1;
+      }
 
-.card p{
-padding:0 10px 20px;
-}
+      .dot {
+        display: none;
+      }
 
-/* CONTACTO */
-.contact{
-text-align:center;
-background:var(--light);
-padding:60px 20px;
-border-radius:20px;
-}
+      .cta {
+        margin-top: 12px;
+        display: inline-flex;
+        width: 100%;
+        align-items: center;
+        justify-content: center;
+        gap: 8px;
+        text-decoration: none;
+        color: #fff;
+        background: var(--primary);
+        border: 0;
+        border-radius: 999px;
+        padding: 14px 16px;
+        font-weight: 800;
+        font-size: 1rem;
+        letter-spacing: 0.2px;
+        box-shadow: 0 10px 18px rgba(30, 168, 93, 0.3);
+        transition:
+          transform 120ms ease,
+          background-color 120ms ease;
+      }
 
-/* WHATSAPP FLOAT */
-.float{
-position:fixed;
-bottom:20px;
-right:20px;
-background:#25D366;
-color:white;
-width:60px;
-height:60px;
-border-radius:50%;
-display:flex;
-align-items:center;
-justify-content:center;
-text-decoration:none;
-font-size:24px;
-}
+      .cta:active {
+        background: var(--primary-press);
+        transform: translateY(1px);
+      }
 
-/* FOOTER */
-footer{
-background:var(--dark);
-color:white;
-text-align:center;
-padding:20px;
-}
-</style>
-</head>
+      .contact-text {
+        margin: 8px 0 0;
+        color: var(--soft);
+        line-height: 1.45;
+        font-size: 0.96rem;
+      }
 
-<body>
+      .location {
+        margin: 10px 0 0;
+        color: #355834;
+        line-height: 1.45;
+        font-size: 0.95rem;
+        font-weight: 700;
+      }
 
-<header>
-<nav>
-<div class="logo">ASAFRUT</div>
-<div>
-<a href="#inicio">Inicio</a>
-<a href="#productos">Productos</a>
-<a href="#contacto">Contacto</a>
-</div>
-</nav>
-</header>
+      .map-container {
+        margin-top: 14px;
+        border-radius: 16px;
+        overflow: hidden;
+        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+        border: 1px solid var(--line);
+      }
 
-<section class="hero" id="inicio">
-<h1>Pulpas naturales 100% frescas </h1>
-<p>Directo del campo colombiano a tu mesa</p>
-<a class="btn" href="https://wa.me/573219102743?text=Hola,%20quiero%20información%20sobre%20las%20pulpas%20ASAFRUT%20🍍">📲 Pedir por WhatsApp</a>
-</section>
+      .map-container iframe {
+        width: 100%;
+        height: 280px;
+        border: none;
+        display: block;
+      }
 
-<section id="productos">
-<h2>Nuestros Productos</h2>
-<div class="grid">
+      .float-whatsapp {
+        position: fixed;
+        right: 16px;
+        bottom: 18px;
+        width: 58px;
+        height: 58px;
+        border-radius: 50%;
+        display: grid;
+        place-items: center;
+        text-decoration: none;
+        color: #fff;
+        background: #25d366;
+        box-shadow: 0 12px 22px rgba(14, 116, 54, 0.44);
+        font-size: 1.45rem;
+        z-index: 20;
+      }
 
-<div class="card">
-<img src="https://images.unsplash.com/photo-1580052614034-d1f39a5f2bd8">
-<h3>Maracuyá</h3>
-<p>Fruta fresca cultivada directamente por nosotros.</p>
-</div>
+      footer {
+        text-align: center;
+        margin-top: 14px;
+        color: #587355;
+        font-size: 0.82rem;
+        font-weight: 700;
+      }
 
-<div class="card">
-<img src="https://images.unsplash.com/photo-1541599468178-c9eb94a8c0a8">
-<h3>Pulpa de Maracuyá</h3>
-<p> Natural y perfecta para bebidas.</p>
-</div>
-  <div class="card">
-<img src="https://images.unsplash.com/photo-1541599468178-c9eb94a8c0a8">
-<h3>Pulpa de Mango</h3>
-<p>Dulce, natural y perfecta para bebidas.</p>
-</div>
+      @keyframes rise {
+        from {
+          opacity: 0;
+          transform: translateY(12px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
 
-<div class="card">
-<img src="https://images.unsplash.com/photo-1610973362999-055e63f76e00">
-<h3>Pulpa de Guanabana</h3>
-<p>Refrescante y 100% natural.</p>
-</div>
+      @media (min-width: 768px) {
+        .wrap {
+          width: min(100%, 560px);
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <main class="wrap">
+      <section class="hero" id="inicio">
+        <img class="logo" src="images/logo.jpeg" alt="Logo de ASAFRUT" />
+        <h1>ASAFRUT</h1>
+        <p class="tagline">El sabor de las frutas y el campo.</p>
+        <p class="about">
+          Somos ASAFRUT, especializados en la producción y comercialización de
+          maracuyá con años de trayectoria en el sector. Ofrecemos pulpas y
+          productos 100% naturales, con presencia local, nacional e
+          internacional, comprometidos siempre con la calidad y la satisfacción
+          de nuestros clientes.
+        </p>
+      </section>
 
-</div>
-</section>
+      <section class="section" id="productos">
+        <h2>Productos</h2>
+        <p class="section-label">Disponibles para tu pedido</p>
+        <ul class="product-list">
+          <li class="product-item">
+            <img src="images/fruta_maracuya.webp" alt="Maracuyá en fruta" />
+            <div class="product-item-text">Maracuyá en fruta</div>
+          </li>
+          <li class="product-item">
+            <img src="images/pulpa_maracuya.jpg" alt="Pulpa de maracuyá" />
+            <div class="product-item-text">Pulpa de maracuyá</div>
+          </li>
+          <li class="product-item">
+            <img src="images/pulpa_mango.webp" alt="Pulpa de mango" />
+            <div class="product-item-text">Pulpa de mango</div>
+          </li>
+          <li class="product-item">
+            <img src="images/pulpa_guanabana.webp" alt="Pulpa de guanábana" />
+            <div class="product-item-text">Pulpa de guanábana</div>
+          </li>
+        </ul>
+      </section>
 
-<section id="contacto">
-<div class="contact">
-<h2>Haz tu pedido hoy </h2>
-<p>Recibe pulpas 100% naturales directo del productor</p>
-<a class="btn" href="https://wa.me/573219102743?text=Hola,%20quiero%20información%20sobre%20las%20pulpas%20ASAFRUT%20🍍">💬 Hablar por WhatsApp</a>
-</div>
-</section>
+      <section class="section" id="contacto">
+        <h2>Contacto</h2>
+        <p class="section-label">Atencion por WhatsApp</p>
+        <p class="contact-text">
+          Escríbenos a nuestro número de WhatsApp o ven a nuestra tienda para
+          tener el gusto de atenderte.
+        </p>
+        <a
+          class="cta"
+          href="https://wa.me/573219102743?text=%C2%A1Hola!%20Quiero%20informaci%C3%B3n%20sobre%20las%20pulpas%20de%20ASAFRUT"
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="Escribenos por WhatsApp"
+        >
+          Escribenos por WhatsApp
+        </a>
+        <p class="location">
+          Estamos ubicados en Cra 83 #96-31, barrio Brisas del Río, Chigorodó,
+          Antioquia.
+        </p>
+        <div class="map-container">
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3968.5234567890123!2d-76.45!3d7.7833!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e4418b4b4b4b4b5%3A0x1234567890123456!2sCra%2083%20%2396-31%2C%20Chigorodo%2C%20Antioquia!5e0!3m2!1ses!2sco!4v1234567890"
+            allowfullscreen=""
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+            aria-label="Ubicación de ASAFRUT en Google Maps"
+          ></iframe>
+        </div>
+      </section>
 
-<footer>
-<p>ASAFRUT © 2026 - Natural, fresco y colombiano</p>
-</footer>
+      <footer>ASAFRUT © 2026</footer>
+    </main>
 
-<a class="float" href="https://wa.me/573219102743?text=Hola,%20quiero%20información%20sobre%20las%20pulpas%20ASAFRUT%20🍍">💬</a>
-
-</body>
+    <a
+      class="float-whatsapp"
+      href="https://wa.me/573219102743?text=%C2%A1Hola!%20Quiero%20informaci%C3%B3n%20sobre%20las%20pulpas%20de%20ASAFRUT"
+      target="_blank"
+      rel="noopener noreferrer"
+      aria-label="Boton flotante de WhatsApp"
+      title="Escribenos por WhatsApp"
+    >
+      &#128172;
+    </a>
+  </body>
 </html>
